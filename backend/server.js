@@ -45,6 +45,19 @@ app.delete("/api/notes/:id", async (req, res) => {
 
 })
 
+app.put("/api/notes/:id", async (req, res) => {
+  const note = req.body;
+  const { id } = req.params;
+
+  try {
+    const updatedNote = await Note.findByIdAndUpdate(id, note, {new: true});
+    res.status(201).json({success: true, message:"Note successfully updated.", data: updatedNote})
+  } catch (error) {
+    console.error("Error creating note:", error.message)
+    res.status(500).json({success: false, message: "Server error."});
+  }
+})
+
 
 
 
