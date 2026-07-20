@@ -13,6 +13,17 @@ const app = express();
 app.use(express.json());
 
 
+app.get("/api/notes", async (req, res) => {
+  try {
+    const allNotes = await Note.find({});
+    res.status(200).json({success: true, message: "Notes retreived successfully", data: allNotes})
+  } catch (error) {
+    console.error("Error getting notes:", error.message)
+    res,status.json({success: false, message: "Server error."})
+  }
+})
+
+
 app.post("/api/notes", async (req, res) => {
   const note = req.body;
 
