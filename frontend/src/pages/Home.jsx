@@ -10,7 +10,7 @@ const Home = () => {
       </section>
        
       <section>
-        
+        Notes
       </section>
     </div>
   )

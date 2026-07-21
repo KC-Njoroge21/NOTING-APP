@@ -1,6 +1,7 @@
 import React from "react";
 import { CiSearch } from "react-icons/ci";
 import { GoPlus } from "react-icons/go";
+import { Link } from "react-router-dom";
 
 const HomeHeader = () => {
   return (
@@ -10,7 +11,9 @@ const HomeHeader = () => {
           <h4 className="text-sm">NOTES APP</h4>
           <h3 className="text-2xl font-semibold">Your notes</h3>
         </div>
-        <button className="bg-black gap-2 flex items-center p-2 text-white rounded-md font-semibold cursor-pointer text-md"><GoPlus className="font-semibold" /> New note</button>
+        <Link to={'/create'}>
+          <button className="bg-black gap-2 flex items-center p-2 text-white rounded-md font-semibold cursor-pointer text-md"><GoPlus className="font-semibold" /> New note</button>
+        </Link>
       </div>
       <div className="p-2 rounded-sm flex items-center bg-gray-200 gap-2">
         <CiSearch size={20} className="font-semibold" />
