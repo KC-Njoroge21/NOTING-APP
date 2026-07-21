@@ -13,7 +13,7 @@ const CreateHeader = () => {
         </button>
         </Link>
 
-        <button className='bg-gray-200 p-2 rounded-md cursor-pointer'>Save note</button>
+        <button className='bg-gray-200 text-sm p-2 rounded-md cursor-pointer'>Save note</button>
       </div>
       <div className='flex gap-3 '>
         <button className='p-0.5 bg-gray-200 rounded-lg text-sm'>Research</button>

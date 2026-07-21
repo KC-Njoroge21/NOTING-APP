@@ -17,7 +17,7 @@ const HomeHeader = () => {
       </div>
       <div className="p-2 rounded-sm flex items-center bg-gray-200 gap-2">
         <CiSearch size={20} className="font-semibold" />
-        <input className="outline-0" type="text" placeholder="Search notes..." />
+        <input className="outline-0 w-full" type="text" placeholder="Search notes..." />
       </div>
     </header>
   );
