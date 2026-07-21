@@ -1,17 +1,23 @@
-import React from 'react'
+import React from "react";
+import { CiSearch } from "react-icons/ci";
+import { GoPlus } from "react-icons/go";
 
 const HomeHeader = () => {
   return (
-    <header>
-      <div>
-        <h4>NOTES APP</h4>
-        <H3>Your notes</H3>
+    <header className="flex flex-col gap-8 p-4">
+      <div className="flex items-center justify-between">
+        <div className="flex flex-col">
+          <h4 className="text-sm">NOTES APP</h4>
+          <h3 className="text-2xl font-semibold">Your notes</h3>
+        </div>
+        <button className="bg-black gap-2 flex items-center p-2 text-white rounded-md font-semibold cursor-pointer text-md"><GoPlus className="font-semibold" /> New note</button>
       </div>
-       <button>
-        New note
-       </button>
+      <div className="p-2 rounded-sm flex items-center bg-gray-200 gap-2">
+        <CiSearch size={20} className="font-semibold" />
+        <input className="outline-0" type="text" placeholder="Search notes..." />
+      </div>
     </header>
-  )
-}
+  );
+};
 
-export default HomeHeader
+export default HomeHeader;
