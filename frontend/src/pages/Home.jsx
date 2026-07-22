@@ -18,14 +18,16 @@ const Home = () => {
         <HomeHeader />
       </section>
        
-      <section>
-        {
+      <section className='p-4'>
+        <div className='flex flex-col gap-4'>
+          {
           notes.map((note, index) => {
             return (
               <NoteCard note={note} />
             )
           })
         }
+        </div>
       </section>
     </div>
   )
