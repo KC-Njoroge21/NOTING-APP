@@ -8,7 +8,10 @@ export const useNoteStore = create((set) => ({
       return {success: false, message: "Please provide all required fields."}
     }
 
-    const res = await fetch("")
+    const res = await fetch("http://localhost:5000/api/notes");
+    const data = await res.json();
+    setNotes((state) => ({notes:[...state.notes, data.data]}))
+    return({success: true, message: "Note created successfully"})
 
   }
 
