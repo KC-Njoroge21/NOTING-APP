@@ -11,6 +11,7 @@ export const useNoteStore = create((set) => ({
     const res = await fetch("http://localhost:5000/api/notes");
     const data = await res.json();
     setNotes((state) => ({notes:[...state.notes, data.data]}))
+    toast.success("Note Created Successfully.")
     return({success: true, message: "Note created successfully"})
 
   }
