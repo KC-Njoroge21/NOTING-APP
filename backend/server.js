@@ -4,6 +4,7 @@ import dotenv from "dotenv"
 import Note from "./model/noteModel.js";
 import router from "./routes/noteRoute.js";
 import cors from "cors";
+import rateLimiter from "./middleware/rateLimiter.js";
 
 dotenv.config();
 
@@ -18,6 +19,7 @@ app.use(cors({origin: "http://localhost:5173"}))
 
 app.use(express.json());
 
+app.use(rateLimiter)
 
 
 
